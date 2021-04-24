@@ -1,0 +1,13 @@
+
+<% if @post1.errors.any? %>
+    <div id="error_explanation">
+        <h2><%= pluralize(@post1.errors.count, "error") %>: Este post no se puede publicar</h2>
+        <ul>
+        <% @post1.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+<% else %>
+    <h1> Felicitaciones, tu post ha sido publicado </h1>
+#<% end %>
